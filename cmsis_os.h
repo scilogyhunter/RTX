@@ -159,6 +159,17 @@ used throughout the whole project.
 #include <stdint.h>
 #include <stddef.h>
 
+#include <cmsis.h>
+#if defined (__CORTEX_M4) || defined (__CORTEX_M4F)
+  #include "core_cm4.h"
+#elif defined (__CORTEX_M3)
+  #include "core_cm3.h"
+#elif defined (__CORTEX_M0)
+  #include "core_cm0.h"
+#else
+  #error "Missing __CORTEX_Mx definition"
+#endif
+
 #ifdef  __cplusplus
 extern "C"
 {
