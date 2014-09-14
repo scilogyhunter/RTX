@@ -1,3 +1,3 @@
 # Keil RTX (CMSIS API)
 
-Please read on [https://github.com/flxo/LPCkit](here) for usage instructions and purpose.
+Please read on https://github.com/flxo/LPCkit for usage instructions and purpose.
