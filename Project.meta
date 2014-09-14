@@ -1,20 +1,8 @@
 Project {
-
-  LibraryConfig Debug{
+  LibraryConfig Debug {
     Files "*.s"
     Files "*.c"
-
     IncludeDir "."
     IncludeDir "lpc_chip_175x_6x/inc"
-
-    DefaultToolchain GCC {
-	  Compiler C, command: "arm-none-eabi-gcc" {
-        Flags "-D__REDLIB__ -D__CMSIS_RTOS -D__CORTEX_M3 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -MMD -MP"
-	  }
-	  Compiler ASM, command: "arm-none-eabi-gcc" {
-        Flags "-x assembler-with-cpp -D__REDLIB__ -DDEBUG -D__CODE_RED -mcpu=cortex-m3 -mthumb -D__REDLIB__"
-	  }	
-	}
   }
-
 }
