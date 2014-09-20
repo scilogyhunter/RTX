@@ -594,7 +594,7 @@ uint32_t osKernelSysTick (void) {
   return __svcKernelSysTick();
 }
 
-static uint32_t os_timer_ticks = 1;
+static uint64_t os_timer_ticks = 10;
 // Get the system time in ms
 uint64_t osSystemTime(void) {
   return os_timer_ticks / 10;
