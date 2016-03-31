@@ -292,7 +292,7 @@ void rt_rmv_dly (P_TCB p_task) {
       /* 'p_task' is at the end of list */
       p_b->delta_time = 0;
     }
-    p_task->p_blnk = NULL;
+    p_task->p_blnk = NULL;//
   }
 }
 
